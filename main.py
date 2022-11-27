@@ -3,8 +3,6 @@ import psycopg2
 import pandas as pd
 import datetime
 from sqlalchemy import create_engine
-from prefect import Flow,task
-from prefect.schedules import IntervalSchedule
 from email.message import EmailMessage
 import ssl
 import smtplib
