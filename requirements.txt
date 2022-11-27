@@ -1,0 +1,5 @@
+pandas==1.5.2
+prefect==2.6.9
+psycopg2==2.9.5
+SQLAlchemy==1.4.44
+tweepy==4.12.1
