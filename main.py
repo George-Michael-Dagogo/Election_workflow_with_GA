@@ -7,7 +7,6 @@ from email.message import EmailMessage
 import ssl
 import smtplib
 import os
-#from datetime import timedelta,date
 
     #pip install "prefect==1.*"
 
