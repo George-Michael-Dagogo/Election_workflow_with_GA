@@ -32,7 +32,9 @@ jobs:
           DATABASE: ${{ secrets.DATABASE }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           HOST: ${{ secrets.HOST }}
+          CONN_STRING: ${{ secrets.CONN_STRING }}
           PASSWORD: ${{ secrets.PASSWORD}}
           USER: ${{ secrets.USER }}
+          
         run: python main.py
           
