@@ -21,7 +21,7 @@ def mail_note(a,b,c,d):
 
 
     email_sender = 'georgemichaeldagogomaynard@gmail.com'
-    email_password = os.environ.get("EMAIL_PASSWORD")
+    email_password = os.environ["EMAIL_PASSWORD"]
     email_receiver = ['michaeligbomezie@gmail.com','georgemichaeldagogo@gmail.com']
     
 
@@ -46,10 +46,10 @@ def mail_note(a,b,c,d):
 
 def get_data():
     today = datetime.date.today()
-    api_key = os.environ.get("API_KEY")
-    api_key_secret = os.environ.get("API_KEY_SECRET")
-    access_token = os.environ.get("ACCESS_TOKEN")
-    access_token_secret = os.environ.get("ACCESS_TOKEN_SECRET")
+    api_key = os.environ["API_KEY"]
+    api_key_secret = os.environ["API_KEY_SECRET"]
+    access_token = os.environ["ACCESS_TOKEN"]
+    access_token_secret = os.environ["ACCESS_TOKEN_SECRET]
     auth = tweepy.OAuthHandler(api_key,api_key_secret)
     auth.set_access_token(access_token,access_token_secret)
 
@@ -77,17 +77,17 @@ def get_data():
     print(df.time_created)
 
 
-    conn_string = os.environ.get("CONN_STRING")
-    
+    conn_string = os.environ["CONN_STRING"]
+  
     db = create_engine(conn_string)
     conn = db.connect()
 
     df.to_sql('election', con=conn, if_exists='append',
             index=False)
-    conn = psycopg2.connect(database=os.environ.get("DATABASE"),
-                                user=os.environ.get("USER"), 
-                                password=os.environ.get("PASSWORD"),
-                                host=os.environ.get("HOST")
+    conn = psycopg2.connect(database=os.environ["DATABASE"],
+                                user=os.environ["USER"], 
+                                password=os.environ["PASSWORD"],
+                                host=os.environ["HOST"]
         )
     conn.autocommit = True
     cursor = conn.cursor()
@@ -116,7 +116,7 @@ def get_data():
     cursor.execute(sql5)
     for e in cursor.fetchall():
         e
-    # conn.commit()
+    conn.commit()
     conn.close()
     mail_note(len(df),q,w,e)
 
