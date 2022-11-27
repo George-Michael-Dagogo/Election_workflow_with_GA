@@ -49,7 +49,7 @@ def get_data():
     api_key = os.environ["API_KEY"]
     api_key_secret = os.environ["API_KEY_SECRET"]
     access_token = os.environ["ACCESS_TOKEN"]
-    access_token_secret = os.environ["ACCESS_TOKEN_SECRET]
+    access_token_secret = os.environ["ACCESS_TOKEN_SECRET"]
     auth = tweepy.OAuthHandler(api_key,api_key_secret)
     auth.set_access_token(access_token,access_token_secret)
 
