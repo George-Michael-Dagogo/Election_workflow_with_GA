@@ -59,7 +59,7 @@ def get_data():
     #keywords = ['Buhari','APC', 'PeterObi','Tinubu','Atiku']
     #it seems the api does not return every tweet containing at least one or every keyword, it returns the only tweets that contains every keyword
     #solution was to use the OR in the keywords string as this is for tweets search only and might give errors in pure python
-    limit = 20
+    limit = 10000
 
     tweets = tweepy.Cursor(api.search_tweets, q = keywords,count = 200, tweet_mode = 'extended',geocode='9.0820,8.6753,450mi', until=today).items(limit)
 
@@ -82,7 +82,7 @@ def get_data():
     db = create_engine(conn_string)
     conn = db.connect()
 
-    df.to_sql('test', con=conn, if_exists='append',
+    df.to_sql('election', con=conn, if_exists='append',
             index=False)
     conn = psycopg2.connect(database=os.environ["DATABASE"],
                                 user=os.environ["USER"], 
@@ -92,27 +92,27 @@ def get_data():
     conn.autocommit = True
     cursor = conn.cursor()
     
-    sql1 = '''DELETE FROM test WHERE time_created < current_timestamp - interval '8' day;'''
+    sql1 = '''DELETE FROM election WHERE time_created < current_timestamp - interval '8' day;'''
     cursor.execute(sql1)
 
-    sql2 = '''DELETE FROM test T1 USING test T2 
+    sql2 = '''DELETE FROM election T1 USING election T2 
     WHERE T1.ctid < T2.ctid 
     AND  T1.tweet = T2.tweet;'''
     #The “CTID” field is a field that exists in every PostgresSQL table, 
     #it is always unique for each and every record in the table
     cursor.execute(sql2)
 
-    sql3 = '''SELECT COUNT(*) FROM test;'''
+    sql3 = '''SELECT COUNT(*) FROM election;'''
     cursor.execute(sql3)
     for q in cursor.fetchall():
         q
 
-    sql4 = '''SELECT DISTINCT(COUNT(tweet)) FROM test;'''
+    sql4 = '''SELECT DISTINCT(COUNT(tweet)) FROM election;'''
     cursor.execute(sql4)
     for w in cursor.fetchall():
         w
 
-    sql5 = '''SELECT * FROM test ORDER BY time_created DESC LIMIT 5;'''
+    sql5 = '''SELECT * FROM election ORDER BY time_created DESC LIMIT 5;'''
     cursor.execute(sql5)
     for e in cursor.fetchall():
         e
