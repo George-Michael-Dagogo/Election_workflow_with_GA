@@ -74,7 +74,8 @@ def get_data():
     df = df[~df.tweet.str.contains("RT")]
     #removes retweeted tweets
     df = df.reset_index(drop = True)
-    print(df.time_created)
+    print(df[1])
+    print('Extraction from Twitter API successful')
 
 
     conn_string = os.environ["CONN_STRING"]
@@ -119,6 +120,7 @@ def get_data():
     conn.commit()
     conn.close()
     mail_note(len(df),q,w,e)
+    print('Push to AWS postgres database successful')
 
 
 get_data()
