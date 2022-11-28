@@ -74,7 +74,7 @@ def get_data():
     df = df[~df.tweet.str.contains("RT")]
     #removes retweeted tweets
     df = df.reset_index(drop = True)
-    print(df[1])
+    print(df.head())
     print('Extraction from Twitter API successful')
 
 
