@@ -1,9 +1,9 @@
                time_created     screen_name  ... lang likes
-0 2022-11-27 23:59:43+00:00    geathezekiah  ...   en     0
-1 2022-11-27 23:58:54+00:00      TWealth_SA  ...   en     1
-2 2022-11-27 23:58:46+00:00  Naija_Promoter  ...   en     0
-3 2022-11-27 23:58:35+00:00        shehufaa  ...   en     0
-4 2022-11-27 23:58:33+00:00  Naija_Promoter  ...   en     0
+0 2022-11-28 23:59:14+00:00    lexington_pc  ...   en     0
+1 2022-11-28 23:58:32+00:00   thesunnigeria  ...   en     0
+2 2022-11-28 23:57:44+00:00  henriugochukwu  ...   en     0
+3 2022-11-28 23:57:43+00:00  IbeawuchiChike  ...   en     0
+4 2022-11-28 23:57:34+00:00    hanneymusawa  ...   en     2
 
 [5 rows x 14 columns]
 Extraction from Twitter API successful
