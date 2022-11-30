@@ -1,9 +1,9 @@
                time_created     screen_name  ... lang likes
-0 2022-11-28 23:59:14+00:00    lexington_pc  ...   en     0
-1 2022-11-28 23:58:32+00:00   thesunnigeria  ...   en     0
-2 2022-11-28 23:57:44+00:00  henriugochukwu  ...   en     0
-3 2022-11-28 23:57:43+00:00  IbeawuchiChike  ...   en     0
-4 2022-11-28 23:57:34+00:00    hanneymusawa  ...   en     2
+0 2022-11-29 23:59:52+00:00       teamNAWTI  ...   en     0
+1 2022-11-29 23:59:20+00:00  kayabdulraheem  ...   en     0
+2 2022-11-29 23:59:05+00:00         lackren  ...   en     0
+3 2022-11-29 23:58:49+00:00        odogwu_1  ...   en     0
+4 2022-11-29 23:58:41+00:00     OfforSegius  ...   en     0
 
 [5 rows x 14 columns]
 Extraction from Twitter API successful
