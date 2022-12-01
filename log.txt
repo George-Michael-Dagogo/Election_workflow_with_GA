@@ -1,9 +1,9 @@
-               time_created     screen_name  ... lang likes
-0 2022-11-29 23:59:52+00:00       teamNAWTI  ...   en     0
-1 2022-11-29 23:59:20+00:00  kayabdulraheem  ...   en     0
-2 2022-11-29 23:59:05+00:00         lackren  ...   en     0
-3 2022-11-29 23:58:49+00:00        odogwu_1  ...   en     0
-4 2022-11-29 23:58:41+00:00     OfforSegius  ...   en     0
+               time_created      screen_name  ... lang likes
+0 2022-11-30 23:59:36+00:00  Omo_Iyaalakara1  ...   en     1
+1 2022-11-30 23:59:36+00:00       cjvick4all  ...   en     2
+2 2022-11-30 23:59:26+00:00  Raphael75819411  ...   en     0
+3 2022-11-30 23:59:20+00:00       Ireyousuph  ...   en     0
+4 2022-11-30 23:59:10+00:00        Nwabulibu  ...   en     0
 
 [5 rows x 14 columns]
 Extraction from Twitter API successful
