@@ -79,7 +79,7 @@ def get_data():
     #removes retweeted tweets
     df = df.reset_index(drop = True)
     print('##',len(df), 'new rows of data was successfully extracted from Twitter API and preview below')
-    print(df.head())
+    print('##', df.head())
 
 
     conn_string = os.environ["CONN_STRING"]
