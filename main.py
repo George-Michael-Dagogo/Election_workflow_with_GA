@@ -47,6 +47,7 @@ def mail_note(a,b,c,d):
 def get_data():
     today = datetime.date.today()
     tomorrow = datetime.date.today() - datetime.timedelta(days=-1)
+    now = datetime.datetime.now()
     current_time = now.strftime("%H:%M")
     api_key = os.environ["API_KEY"]
     api_key_secret = os.environ["API_KEY_SECRET"]
