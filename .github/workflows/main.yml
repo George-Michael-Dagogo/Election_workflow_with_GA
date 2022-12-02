@@ -36,7 +36,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD}}
           USER: ${{ secrets.USER }}
           
-        run: python main.py > log.txt
+        run: python main.py > README.md
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
