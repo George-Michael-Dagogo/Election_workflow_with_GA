@@ -46,6 +46,7 @@ def mail_note(a,b,c,d):
 
 def get_data():
     today = datetime.date.today()
+    tomorrow = datetime.date.today() - datetime.timedelta(days=-1)
     api_key = os.environ["API_KEY"]
     api_key_secret = os.environ["API_KEY_SECRET"]
     access_token = os.environ["ACCESS_TOKEN"]
@@ -54,6 +55,7 @@ def get_data():
     auth.set_access_token(access_token,access_token_secret)
 
     api = tweepy.API(auth)
+    print('# Daily pipeline status')
 
     keywords = ['Buhari OR APC OR  PeterObi OR Tinubu OR PDP OR Atiku OR LabourParty']
     #keywords = ['Buhari','APC', 'PeterObi','Tinubu','Atiku']
@@ -74,8 +76,8 @@ def get_data():
     df = df[~df.tweet.str.contains("RT")]
     #removes retweeted tweets
     df = df.reset_index(drop = True)
+    print('##',len(df), 'new rows of data was successfully extracted from Twitter API and preview below')
     print(df.head())
-    print('Extraction from Twitter API successful')
 
 
     conn_string = os.environ["CONN_STRING"]
@@ -120,7 +122,9 @@ def get_data():
     conn.commit()
     conn.close()
     mail_note(len(df),q,w,e)
-    print('Push to AWS postgres database successful')
+    print('## AWS Postgres Database was successfully updated at ', current_time , 'on' , today)
+    print('## Database currently at',w,'distinct records')
+    print('### Next update at', tomorrow)
 
 
 get_data()
