@@ -1,13 +1,13 @@
 # Daily pipeline status
-## 9960 new rows of data was successfully extracted from Twitter API and preview below
+## 9969 new rows of data was successfully extracted from Twitter API and preview below
 ##                time_created     screen_name  ... lang likes
-0 2022-12-10 23:59:30+00:00   lemekeosborn1  ...   en     0
-1 2022-12-10 23:59:23+00:00     oritsedavid  ...  und     0
-2 2022-12-10 23:58:42+00:00  saintfrankline  ...   en     0
-3 2022-12-10 23:58:03+00:00   thesunnigeria  ...   en     0
-4 2022-12-10 23:57:52+00:00         ekiloui  ...   en     1
+0 2022-12-11 23:59:46+00:00      Oyinkitana  ...   en     1
+1 2022-12-11 23:59:36+00:00    anne_david_O  ...   en     0
+2 2022-12-11 23:59:29+00:00      ahmed_oris  ...  und     5
+3 2022-12-11 23:59:20+00:00     OGA_AKORIN1  ...   tl     0
+4 2022-12-11 23:58:51+00:00  theexplainerng  ...   en     0
 
 [5 rows x 14 columns]
-## AWS Postgres Database was successfully updated at  02:22 on 2022-12-11
-## Database currently at (78323,) distinct records
-### Next update at 2022-12-12
+## AWS Postgres Database was successfully updated at  02:17 on 2022-12-12
+## Database currently at (78335,) distinct records
+### Next update at 2022-12-13
