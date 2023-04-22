@@ -1,13 +1,13 @@
 # Daily pipeline status
-## 9950 new rows of data was successfully extracted from Twitter API and preview below
-##                time_created     screen_name  ... lang likes
-0 2023-04-20 23:59:53+00:00  Etz_frolic5005  ...   in     0
-1 2023-04-20 23:59:29+00:00     GozieDaniel  ...   en     0
-2 2023-04-20 23:58:55+00:00       Jet8Lucky  ...   en     0
-3 2023-04-20 23:58:54+00:00     Agbonbiagba  ...   en     0
-4 2023-04-20 23:58:43+00:00       Josh_Bits  ...   en     0
+## 9953 new rows of data was successfully extracted from Twitter API and preview below
+##                time_created    screen_name  ... lang likes
+0 2023-04-21 23:59:53+00:00  kunlealex2003  ...   en     0
+1 2023-04-21 23:59:45+00:00      olaoptech  ...   en     1
+2 2023-04-21 23:59:38+00:00  TheNationNews  ...   en     4
+3 2023-04-21 23:59:06+00:00      RashedatJ  ...   en     0
+4 2023-04-21 23:58:12+00:00  GaniyuAyewumi  ...   en     0
 
 [5 rows x 14 columns]
-## AWS Postgres Database was successfully updated at  02:00 on 2023-04-21
-## Database currently at (78262,) distinct records
-### Next update at 2023-04-22
+## AWS Postgres Database was successfully updated at  02:01 on 2023-04-22
+## Database currently at (77451,) distinct records
+### Next update at 2023-04-23
