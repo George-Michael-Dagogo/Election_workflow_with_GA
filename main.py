@@ -97,8 +97,6 @@ def get_data():
     conn.autocommit = True
     cursor = conn.cursor()
     
-    sql1 = '''DELETE FROM election WHERE time_created < current_timestamp - interval '8' day;'''
-    cursor.execute(sql1)
 
     sql2 = '''DELETE FROM election T1 USING election T2 
     WHERE T1.ctid < T2.ctid 
